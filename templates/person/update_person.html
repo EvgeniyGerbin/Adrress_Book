@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<style>
+</style>
+<div class="col-4">
+    <h3 class="mt-5">Product Update</h3>
+    <hr class="mt-0 mb-4">
+</div>
+<div class="m-3 p-3">
+    <div>
+        <form method="post" novalidate enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form | crispy }}
+            <input type="submit" class="btn btn-success" style="margin-top: 20px" value="Update">
+        </form>
+    </div>
+    <div>
+        <form method="get" action="{% url 'base' %}">
+            <input type="submit" class="btn btn-primary stretched-link"  style="margin-top: 10px" value="Base page">
+        </form>
+    </div>
+</div>
+
+{% endblock %}
