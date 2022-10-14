@@ -37,13 +37,14 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'crispy_forms',
-    'rest_framework',
 
     # custom applications
     "address_book",
 
+    # other
     "phonenumbers",
+    'rest_framework',
+    'crispy_forms',
 
 ]
 
